@@ -44,6 +44,59 @@ h2 {
   color: seashell;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  color: seashell;
+}
+
+.main-layer {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1.5px);
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.content-main #greeting {
+  font-size: 30px;
+}
+
+.content-main #clock {
+  font-size: 35px;
+}
+
+#quote {
+  opacity: 0.5;
+  transition: opacity 1s ease-in;
+  font-style: italic;
+  font-size: 15px;
+  text-align: right;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#quote:hover {
+  opacity: 1;
+}
+
+#weather {
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .hidden {
   display: none;
 }

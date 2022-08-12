@@ -8,7 +8,7 @@ const quotes = [
     author: "Thomas Jefferson",
   },
   {
-    qutoe:
+    quote:
       "If people only knew how hard I've worked to gain my mastery, it wouldn't seem so wonderful at all.",
     author: "Michelangelo",
   },
@@ -50,4 +50,4 @@ const author = document.querySelector("#quote span:last-child");
 const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todayQuote.quote;
-author.innerText = todayQuote.author;
+author.innerText = `- ${todayQuote.author}`;
