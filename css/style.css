@@ -1,3 +1,6 @@
+@import "reset.css";
+@import "login.css";
+
 body {
   background-attachment: fixed;
   background-size: cover;
@@ -13,37 +16,6 @@ h2 {
   font-size: 25px;
 }
 
-.login-container {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.login input {
-  background: none;
-  border: none;
-  border-bottom: 1px solid seashell;
-  outline: none;
-  height: 30px;
-  color: seashell;
-  font-size: 18px;
-  text-align: center;
-}
-
-.login input::placeholder {
-  color: seashell;
-}
-
-.login-layer {
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  color: seashell;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -53,8 +25,45 @@ h2 {
 }
 
 .main-layer {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(1.5px);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.content-head {
+  display: inline-flex;
+  /* width: 100%; */
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+.content-head #music {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.content-head #music #player {
+  display: none;
+}
+
+.content-head #music img {
+  filter: invert(97%) sepia(2%) saturate(1940%) hue-rotate(318deg)
+    brightness(100%) contrast(103%);
+  cursor: pointer;
+}
+
+.content-head #music span {
+  flex-basis: 100%;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.content-head #weather {
+  font-size: 15px;
+  text-align: right;
 }
 
 .content-main {
@@ -69,10 +78,32 @@ h2 {
 
 .content-main #greeting {
   font-size: 30px;
+  margin: 10px;
 }
 
 .content-main #clock {
   font-size: 35px;
+  margin: 10px;
+}
+
+.content-main #todo-form input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid seashell;
+  outline: none;
+  height: 30px;
+  color: seashell;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content-main #todo-form input::placeholder {
+  color: seashell;
+  opacity: 0.8;
+}
+
+.content-main #todo-form input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 #quote {
@@ -88,13 +119,6 @@ h2 {
 
 #quote:hover {
   opacity: 1;
-}
-
-#weather {
-  font-size: 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .hidden {

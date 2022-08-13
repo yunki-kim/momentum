@@ -12,19 +12,21 @@ function onLoginSubmit(event) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  paintGreetings(username);
+  paintMain(username);
 }
 
 function onLogoutSubmit(event) {
   event.preventDefault();
   localStorage.removeItem(USERNAME_KEY);
   localStorage.removeItem("todos");
+  mainContainer.classList.add(HIDDEN_CLASSNAME);
+  loginContainer.classList.remove(HIDDEN_CLASSNAME);
 }
 
-function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+function paintMain(username) {
+  greeting.innerText = `Hello, ${username}`;
   loginContainer.classList.add(HIDDEN_CLASSNAME);
-  // mainContainer.classList.remove(HIDDEN_CLASSNAME);
+  mainContainer.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -32,5 +34,5 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (savedUsername === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-  paintGreetings(savedUsername);
+  paintMain(savedUsername);
 }
