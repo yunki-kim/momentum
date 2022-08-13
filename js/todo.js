@@ -20,13 +20,14 @@ function deleteToDo(event) {
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
+  li.classList = "article-content todo-block";
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
-  button.innerText = "❌";
-  button.addEventListener("click", deleteToDo);
+  const img = document.createElement("img");
+  img.src = "img/ico/close.svg";
+  img.addEventListener("click", deleteToDo);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(img);
   toDoList.append(li);
 }
 
