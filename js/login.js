@@ -22,7 +22,7 @@ function onLogoutSubmit(event) {
   localStorage.removeItem("todos");
   document.querySelector("#todo-form input").value = "";
   document.querySelector("#todo-list").textContent = "";
-  document.querySelector("#pause") = true;
+  handlePauseBtnClick();
   mainContainer.classList.add(HIDDEN_CLASSNAME);
   loginContainer.classList.remove(HIDDEN_CLASSNAME);
 }
