@@ -8,10 +8,15 @@
 }
 
 body {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR" sans-serif;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -28,6 +33,7 @@ h2 {
   width: 100vw;
   height: 100vh;
   color: seashell;
+  animation: change 1s ease-in;
 }
 
 .main-layer {
@@ -39,6 +45,7 @@ h2 {
   display: inline-flex;
   margin: 20px;
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .content-head #music {
@@ -56,6 +63,11 @@ h2 {
 .content-head #music img {
   filter: var(--filter-seashell);
   cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.content-head #music img:hover {
+  transform: scale(1.1);
 }
 
 .content-head #music span {
@@ -75,12 +87,12 @@ h2 {
   width: 100vw;
   height: 100vh;
   justify-content: center;
-  font-weight: bold;
   text-align: center;
 }
 
 .main-left {
   flex: 1;
+  font-weight: bold;
 }
 
 .main-left #greeting {
@@ -128,7 +140,6 @@ h2 {
 
 .main-center #todo-list::-webkit-scrollbar {
   display: none;
-  width: none;
 }
 
 .main-center .todo-block {
@@ -150,6 +161,11 @@ h2 {
 .main-center img {
   filter: var(--filter-red);
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.main-center img:hover {
+  transform: scale(1.3);
 }
 
 .main-rigth {
@@ -159,11 +175,18 @@ h2 {
 
 .main-rigth img {
   filter: var(--filter-seashell);
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.main-rigth img:hover {
+  transform: scale(1.1);
 }
 
 .content-bottom {
   margin: 20px;
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .content-bottom #quote {
