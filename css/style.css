@@ -171,6 +171,8 @@ h2 {
   filter: var(--filter-red);
   cursor: pointer;
   transition: all 0.3s linear;
+  width: 25px;
+  height: 25px;
 }
 
 .main-center img:hover {
