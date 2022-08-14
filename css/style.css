@@ -14,10 +14,10 @@ body {
   background-position: center;
   margin: 0;
 }
-
+/* 
 body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 h1 {
   font-size: 48px;
@@ -139,6 +139,15 @@ h2 {
 }
 
 .main-center #todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-center #todo-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 245, 238, 0.2);
+  border-radius: 10px;
+}
+
+.main-center #todo-list::-webkit-scrollbar-track {
   display: none;
 }
 
